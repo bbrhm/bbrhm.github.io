@@ -10,6 +10,8 @@ for (const path of ["index.html", "articles/index.html", "404.html", "feed.xml",
   assert(existsSync(join(root, path)), `Missing output: ${path}`);
 }
 const pages = walk(root).filter((file) => file.endsWith(".html"));
+const analyticsConfig = readFileSync("src/_includes/analytics.njk", "utf8")
+  .match(/<script>([\s\S]*?)<\/script>/)[1].trim();
 for (const file of pages) {
   const html = readFileSync(file, "utf8");
   assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, `Expected one page title: ${file}`);
@@ -17,7 +19,18 @@ for (const file of pages) {
   const scripts = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)];
   let schemas = 0;
   let themeScripts = 0;
+  let analyticsLoaders = 0;
+  let analyticsConfigurations = 0;
   for (const [, attributes, content] of scripts) {
+    if (/^\s*async src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-373S98MM0S"\s*$/.test(attributes)) {
+      assert.equal(content.trim(), "", `Unexpected Google tag loader content: ${file}`);
+      analyticsLoaders++;
+      continue;
+    }
+    if (!attributes.trim() && content.trim() === analyticsConfig) {
+      analyticsConfigurations++;
+      continue;
+    }
     if (/^\s*src="\/assets\/theme\.js"\s*$/.test(attributes)) {
       assert.equal(content.trim(), "", `Unexpected inline script: ${file}`);
       themeScripts++;
@@ -32,6 +45,8 @@ for (const file of pages) {
   const noindex = html.includes('name="robots" content="noindex"');
   assert.equal(schemas, noindex ? 0 : 1, `Unexpected structured data count: ${file}`);
   assert.equal(themeScripts, 1, `Missing theme script: ${file}`);
+  assert.equal(analyticsLoaders, 1, `Expected one Google tag loader: ${file}`);
+  assert.equal(analyticsConfigurations, 1, `Expected one Google Analytics configuration: ${file}`);
   assert(html.includes('data-theme-toggle aria-label='), `Missing accessible theme switch: ${file}`);
   assert(/<title>[^<]+<\/title>/.test(html), `Missing page title: ${file}`);
   assert(/<meta name="description" content="[^"]+">/.test(html), `Missing description: ${file}`);
@@ -65,4 +80,4 @@ for (const project of projects) {
   assert(new URL(project.url).protocol === "https:", `Project link must use HTTPS: ${project.name}`);
   assert(home.includes(project.name) && home.includes(project.url), `Project missing from homepage: ${project.name}`);
 }
-console.log(`Checked ${pages.length} pages: links, anchors, titles, canonical URLs, sharing metadata and structured data pass.`);
+console.log(`Checked ${pages.length} pages: links, metadata, structured data and one Google Analytics tag per page pass.`);

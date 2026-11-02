@@ -22,7 +22,8 @@ Read README.md first. This repository is bbrhm's public personal site. The sibli
 - Add projects in `src/_data/projects.json`, and articles as Markdown under `src/articles/`.
 - Do not create sample articles for public display. `draft: true` and future dates exclude articles from output.
 - Keep article slugs stable. Preserve the shared article layout, feed, sitemap and accessible navigation.
-- Keep the site static; it does not need a client framework, accounts, a database or analytics for its present purpose. A small local script for the user-requested theme switch is intentional.
+- Keep the site static; it does not need a client framework, accounts or a database for its present purpose. The user-requested theme switch and Google Analytics tag are intentional.
+- The owner explicitly enabled Google Analytics with measurement ID `G-373S98MM0S`. Preserve the supplied snippet in `src/_includes/analytics.njk`, included once in the shared head. Do not add duplicate initialization, custom events or change the measurement ID without a request.
 - Run `npm run check`. Check narrow and wide layouts, and light and dark themes when browser preview is available.
 - Publish through the Pages workflow. Do not commit `_site/`, `node_modules/`, `.DS_Store`, credentials or copied private application files.
 - Keep the profile README's short project descriptions and public links consistent when they change here.

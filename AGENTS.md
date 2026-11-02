@@ -6,7 +6,7 @@ Read README.md first. This repository is bbrhm's public personal site. The sibli
 
 - Matter of fact, modest and low key. Describe what exists in plain language.
 - Use sans-serif fonts for all interface and article text. Keep the original simple list layout and modest typography.
-- Day mode uses warm off-white and taupe neutrals. Night mode uses warm very dark grey/near-black (`#181716`) with near-neutral charcoal surfaces; the user rejected the previous brown background. Do not use brown or green-tinted dark surfaces. Green is limited to small accents such as links, focus indicators and status labels; retain existing project icon artwork.
+- Day mode uses warm off-white and taupe neutrals. Night mode uses almost-black (`#0b0b0b`) with near-neutral charcoal surfaces; the user rejected the previous brown background. Do not use brown or green-tinted dark surfaces. Green is limited to small accents such as links, focus indicators and status labels; retain existing project icon artwork.
 - The user explicitly chose the first website design (commit `cefc62ce132c85d44d17d7ea96627897a362812a`) and asked to restore it after rejecting subsequent redesigns. Preserve that design for future content updates.
 - Do not reintroduce large italic display headings, Instrument Serif, circular monograms, two-column image cards, project previews, or the later editorial/portfolio styling. Treat general requests to improve the site as refinements within the original design.
 - Motion should be short and subtle, with no loops or hidden content dependency. Honour reduced-motion preferences and keep keyboard focus clear.

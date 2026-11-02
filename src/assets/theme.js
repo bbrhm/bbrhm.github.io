@@ -16,7 +16,7 @@
     const theme = preference || (system.matches ? "dark" : "light");
     root.dataset.theme = theme;
     document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
-      meta.content = theme === "dark" ? "#181716" : "#f6f2eb";
+      meta.content = theme === "dark" ? "#0b0b0b" : "#f6f2eb";
     });
     if (button) {
       const label = theme === "dark" ? "Switch to day mode" : "Switch to night mode";

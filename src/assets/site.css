@@ -125,9 +125,9 @@ h1 { font-family: var(--font); font-size: clamp(32px, 4.8vw, 46px); font-weight:
 .not-found { padding-bottom: 100px; }
 .not-found .back-link { margin-top: 26px; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) { color-scheme: dark; --paper: #181716; --ink: #e7e5e1; --muted: #aaa6a0; --green: #a6b894; --line: #363432; --soft: #242321; --selection: #454340; }
+  :root:not([data-theme]) { color-scheme: dark; --paper: #0b0b0b; --ink: #e7e5e1; --muted: #aaa6a0; --green: #a6b894; --line: #2e2d2c; --soft: #171716; --selection: #454340; }
 }
-:root[data-theme="dark"] { color-scheme: dark; --paper: #181716; --ink: #e7e5e1; --muted: #aaa6a0; --green: #a6b894; --line: #363432; --soft: #242321; --selection: #454340; }
+:root[data-theme="dark"] { color-scheme: dark; --paper: #0b0b0b; --ink: #e7e5e1; --muted: #aaa6a0; --green: #a6b894; --line: #2e2d2c; --soft: #171716; --selection: #454340; }
 @media (max-width: 680px) {
   .site-shell { width: calc(100% - 48px); }
   .site-header { min-height: 82px; gap: 16px; }

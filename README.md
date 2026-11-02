@@ -19,7 +19,7 @@ The sun/moon button beside the navigation switches appearance. New visitors foll
 
 `npm run check` includes theme behavior checks for saved preferences, switching, storage failures, device changes and cross-tab updates.
 
-Day mode uses warm off-white/taupe neutrals. Night mode uses warm charcoal/near-black (`#181716`), including matching browser theme-color metadata. The header adds `أبو إبراهيم` beneath `bbrhm` in a small, self-hosted IBM Plex Sans Arabic face. Other text continues to use system sans-serif fonts.
+Day mode uses warm off-white/taupe neutrals. Night mode uses almost-black (`#0b0b0b`), including matching browser theme-color metadata. The header adds `أبو إبراهيم` beneath `bbrhm` in a small, self-hosted IBM Plex Sans Arabic face. Other text continues to use system sans-serif fonts.
 
 ## Add or edit a project
 

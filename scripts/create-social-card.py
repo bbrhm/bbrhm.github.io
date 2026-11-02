@@ -12,7 +12,6 @@ draw = ImageDraw.Draw(image)
 ink, muted, line, accent = "#39342e", "#72685d", "#dcd4c8", "#536b54"
 font = lambda size: ImageFont.truetype(args.font, size)
 draw.text((80, 65), "bbrhm", font=font(32), fill=ink)
-draw.text((80 + draw.textlength("bbrhm", font=font(32)), 65), ".", font=font(32), fill=accent)
 draw.text((900, 75), "bbrhm.github.io", font=font(22), fill=muted)
 draw.line((80, 145, 1120, 145), fill=line, width=2)
 draw.text((78, 214), "Projects & articles.", font=font(64), fill=ink)

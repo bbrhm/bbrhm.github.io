@@ -15,14 +15,24 @@ for (const file of pages) {
   assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, `Expected one page title: ${file}`);
   assert(html.includes('href="#main"'), `Missing skip link: ${file}`);
   const scripts = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)];
+  let schemas = 0;
+  let themeScripts = 0;
   for (const [, attributes, content] of scripts) {
-    assert(/^\s*type="application\/ld\+json"\s*$/.test(attributes), `Unexpected executable script: ${file}`);
+    if (/^\s*src="\/assets\/theme\.js"\s*$/.test(attributes)) {
+      assert.equal(content.trim(), "", `Unexpected inline script: ${file}`);
+      themeScripts++;
+      continue;
+    }
+    assert(/^\s*type="application\/ld\+json"\s*$/.test(attributes), `Unexpected script: ${file}`);
     const schema = JSON.parse(content);
     assert.equal(schema["@context"], "https://schema.org", `Invalid structured data: ${file}`);
     assert(schema["@graph"].some((item) => item["@type"] === "Person"), `Missing author: ${file}`);
+    schemas++;
   }
   const noindex = html.includes('name="robots" content="noindex"');
-  assert.equal(scripts.length, noindex ? 0 : 1, `Unexpected structured data count: ${file}`);
+  assert.equal(schemas, noindex ? 0 : 1, `Unexpected structured data count: ${file}`);
+  assert.equal(themeScripts, 1, `Missing theme script: ${file}`);
+  assert(html.includes('data-theme-toggle aria-label='), `Missing accessible theme switch: ${file}`);
   assert(/<title>[^<]+<\/title>/.test(html), `Missing page title: ${file}`);
   assert(/<meta name="description" content="[^"]+">/.test(html), `Missing description: ${file}`);
   assert(html.includes('name="twitter:card" content="summary_large_image"'), `Missing sharing metadata: ${file}`);

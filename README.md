@@ -1,6 +1,6 @@
 # bbrhm.github.io
 
-Personal website: projects, demos and articles. Built with Eleventy, published on GitHub Pages. The output is static HTML and CSS, with inert JSON-LD metadata; there is no executable browser JavaScript, analytics or remote font dependency. The original list layout uses system sans-serif fonts, warm off-white/taupe neutrals and small green accents. Short CSS animations respect reduced-motion preferences.
+Personal website: projects, demos and articles. Built with Eleventy, published on GitHub Pages. The output is static HTML and CSS, with inert JSON-LD metadata and a small local theme script. There is no framework, analytics or remote font dependency. The original list layout uses system sans-serif fonts, warm off-white/taupe neutrals and small green accents. Short CSS animations respect reduced-motion preferences.
 
 ## Local preview
 
@@ -12,6 +12,12 @@ npm run dev
 ```
 
 Open `http://localhost:8080`. Run `npm run check` before publishing. Generated files go in `_site/` and are not committed.
+
+## Day and night mode
+
+The sun/moon button beside the navigation switches appearance. New visitors follow their device setting; a manual choice is saved in `localStorage` under `bbrhm-theme` and restored before the stylesheet loads. Choices sync between open tabs. If storage is blocked, the switch still works for the current page. Without JavaScript, CSS follows the device setting and hides the inactive control.
+
+`npm run check` includes theme behavior checks for saved preferences, switching, storage failures, device changes and cross-tab updates.
 
 ## Add or edit a project
 
@@ -59,7 +65,8 @@ For the initial setup, go to [Settings → Pages](https://github.com/bbrhm/bbrhm
 - `src/_data/projects.json`: project listing.
 - `src/articles/*.md`: articles.
 - `src/_includes/`: shared page and article layouts.
-- `src/assets/site.css`: styles; dark mode follows the device preference.
+- `src/assets/site.css`: styles and day/night palettes.
+- `src/assets/theme.js`: the appearance switch and saved preference.
 - `src/_data/site.json`: site details.
 - `../bbrhm/README.md`: separate GitHub profile repository; keep project descriptions consistent.
 

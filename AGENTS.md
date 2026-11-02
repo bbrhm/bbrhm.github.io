@@ -10,6 +10,8 @@ Read README.md first. This repository is bbrhm's public personal site. The sibli
 - The user explicitly chose the first website design (commit `cefc62ce132c85d44d17d7ea96627897a362812a`) and asked to restore it after rejecting subsequent redesigns. Preserve that design for future content updates.
 - Do not reintroduce large italic display headings, Instrument Serif, circular monograms, two-column image cards, project previews, or the later editorial/portfolio styling. Treat general requests to improve the site as refinements within the original design.
 - Motion should be short and subtle, with no loops or hidden content dependency. Honour reduced-motion preferences and keep keyboard focus clear.
+- Keep the header wordmark as plain `bbrhm`, with no trailing decorative dot. Keep the share image and page titles consistent.
+- Day/night mode uses a small header switch and `src/assets/theme.js`. Start from the device preference, persist a manual choice, restore it before paint, and keep the control keyboard-accessible. Without JavaScript the site follows the device preference. Preserve warm neutrals in both themes.
 - Keep descriptive titles, canonical links, Open Graph/Twitter metadata, the share image, JSON-LD, robots.txt, sitemap and feed consistent. Structured data must describe actual content; do not invent credentials, ratings, dates or achievements. JSON-LD is inert data, not executable browser JavaScript.
 - Avoid marketing copy, superlatives, invented biography, achievements, audience figures, testimonials, badges and decorative dashboards.
 - Use the full names Arabic Reader Toolkit and Open Map Driver. Check their current root summaries before changing factual descriptions. Do not copy operational details from private repositories into this public site.
@@ -20,7 +22,7 @@ Read README.md first. This repository is bbrhm's public personal site. The sibli
 - Add projects in `src/_data/projects.json`, and articles as Markdown under `src/articles/`.
 - Do not create sample articles for public display. `draft: true` and future dates exclude articles from output.
 - Keep article slugs stable. Preserve the shared article layout, feed, sitemap and accessible navigation.
-- Keep the site static; it does not need a client framework, accounts, a database or analytics for its present purpose.
+- Keep the site static; it does not need a client framework, accounts, a database or analytics for its present purpose. A small local script for the user-requested theme switch is intentional.
 - Run `npm run check`. Check narrow and wide layouts, and light and dark themes when browser preview is available.
 - Publish through the Pages workflow. Do not commit `_site/`, `node_modules/`, `.DS_Store`, credentials or copied private application files.
 - Keep the profile README's short project descriptions and public links consistent when they change here.

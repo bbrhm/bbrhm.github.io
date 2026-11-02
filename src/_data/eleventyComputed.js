@@ -2,7 +2,7 @@ export default {
   seo(data) {
     const { site, page } = data;
     const url = new URL(page.url, site.url).href;
-    const title = data.title ? `${data.title} · ${site.name}` : `${site.name} · Projects & articles`;
+    const title = data.title ? `${data.title} — ${site.name}` : `${site.name} — Projects & articles`;
     const description = data.description || site.description;
     const image = new URL(data.image || site.socialImage, site.url).href;
     const personId = `${site.url}/#person`;

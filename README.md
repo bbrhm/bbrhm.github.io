@@ -19,6 +19,8 @@ The sun/moon button beside the navigation switches appearance. New visitors foll
 
 `npm run check` includes theme behavior checks for saved preferences, switching, storage failures, device changes and cross-tab updates.
 
+Day mode uses warm off-white/taupe neutrals. Night mode uses warm charcoal/near-black (`#181716`), including matching browser theme-color metadata. The header adds `أبو إبراهيم` beneath `bbrhm` in a small, self-hosted IBM Plex Sans Arabic face. Other text continues to use system sans-serif fonts.
+
 ## Add or edit a project
 
 Edit `src/_data/projects.json`. Entries appear in their listed order. Copy a small project icon into `src/assets/` and use its root-relative path. Use the public site or demo URL; the application source repositories are private.
@@ -74,4 +76,4 @@ For the initial setup, go to [Settings → Pages](https://github.com/bbrhm/bbrhm
 - `src/_data/site.json`: site details.
 - `../bbrhm/README.md`: separate GitHub profile repository; keep project descriptions consistent.
 
-Project icons are copied from their respective applications. No application source code is included here.
+Project icons are copied from their respective applications. IBM Plex Sans Arabic is bundled under the SIL Open Font License; see [THIRD_PARTY.md](THIRD_PARTY.md). No application source code is included here.

@@ -7,7 +7,7 @@ const source = readFileSync(new URL("../src/assets/theme.js", import.meta.url), 
 
 function visit({ saved = null, dark = false, readBlocked = false, writeBlocked = false, ready = false } = {}) {
   const root = { dataset: {} };
-  const metas = [{ content: "#f6f2eb" }, { content: "#211e1a" }];
+  const metas = [{ content: "#f6f2eb" }, { content: "#181716" }];
   const documentEvents = {}, windowEvents = {}, mediaEvents = {}, buttonEvents = {};
   const button = {
     hidden: true, attributes: {}, title: "",
@@ -54,7 +54,7 @@ test("the device theme is set before the controls load, then the button switches
   assert.equal(page.root.dataset.theme, "dark");
   assert.equal(page.saved(), "dark");
   assert.equal(page.button.attributes["aria-label"], "Switch to day mode");
-  assert(page.metas.every((meta) => meta.content === "#211e1a"));
+  assert(page.metas.every((meta) => meta.content === "#181716"));
   page.click();
   assert.equal(page.root.dataset.theme, "light");
   assert.equal(page.saved(), "light");

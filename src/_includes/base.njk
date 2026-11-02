@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f6f2eb" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#211e1a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#181716" media="(prefers-color-scheme: dark)">
   <script src="/assets/theme.js"></script>
   {% include "analytics.njk" %}
   <title>{{ seo.title }}</title>
@@ -35,6 +35,7 @@
   {% endif %}
   {% if not noindex %}<script type="application/ld+json">{{ seo.schema | jsonLd | safe }}</script>{% endif %}
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preload" href="/assets/fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/site.css">
   <link rel="alternate" type="application/atom+xml" title="Articles by bbrhm" href="/feed.xml">
 </head>
@@ -42,7 +43,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-shell">
     <header class="site-header">
-      <a class="wordmark" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>bbrhm</a>
+      <a class="wordmark" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}><span class="wordmark-name">bbrhm</span><span class="wordmark-arabic" lang="ar" dir="rtl">أبو إبراهيم</span></a>
       <div class="header-controls">
         <nav aria-label="Main navigation">
         <a href="/#projects">Projects</a>

@@ -6,14 +6,7 @@
     "linkLabel": "Visit site",
     "status": "Invite-only alpha",
     "category": "Reading tool",
-    "icon": "/assets/arabic-reader-toolkit.svg",
-    "shortName": "ART",
-    "preview": "/assets/reading-tools.svg",
-    "previewStyle": "reading-preview",
-    "previewWidth": 800,
-    "previewHeight": 700,
-    "previewAlt": "Illustration of an Arabic page with text recognition, audio transcription and translation tools.",
-    "previewCaption": "Reading tools · Illustration"
+    "icon": "/assets/arabic-reader-toolkit.svg"
   },
   {
     "name": "Open Map Driver",
@@ -22,15 +15,6 @@
     "linkLabel": "Open demo",
     "status": "Public alpha",
     "category": "Driving demo",
-    "icon": "/assets/open-map-driver.svg",
-    "shortName": "OMD",
-    "preview": "/assets/open-map-driver.webp",
-    "previewStyle": "driving-preview",
-    "previewWidth": 705,
-    "previewHeight": 419,
-    "previewAlt": "An orange car on a street in Carlton, Melbourne, in an earlier version of Open Map Driver.",
-    "previewCaption": "Earlier gameplay · Carlton, Melbourne",
-    "creditUrl": "https://www.openstreetmap.org/copyright",
-    "creditLabel": "© OpenStreetMap contributors"
+    "icon": "/assets/open-map-driver.svg"
   }
 ]

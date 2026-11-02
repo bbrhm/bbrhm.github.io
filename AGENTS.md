@@ -5,9 +5,9 @@ Read README.md first. This repository is bbrhm's public personal site. The sibli
 ## Voice and appearance
 
 - Matter of fact, modest and low key. Describe what exists in plain language.
-- Use warm off-white, brown/taupe text and neutral surfaces. Green is a small accent for links, focus and status, not the base colour of the site. Dark mode uses warm brown neutrals too.
-- Use normal system sans-serif headings at modest sizes. The user found oversized italic Instrument Serif headings and the circular monogram too classy; do not bring those back. Keep the two-column project previews, stacked on phones.
-- Use existing project artwork and screenshots. Keep illustration labels, historical screenshot descriptions and source credits accurate. Do not invent product screenshots.
+- Keep the warm paper background, dark text, muted green, restrained serif headings and simple list layout.
+- The user explicitly chose the first website design (commit `cefc62ce132c85d44d17d7ea96627897a362812a`) and asked to restore it after rejecting subsequent redesigns. Preserve that design for future content updates.
+- Do not reintroduce large italic display headings, Instrument Serif, circular monograms, two-column image cards, project previews, or the later editorial/portfolio styling. Treat general requests to improve the site as refinements within the original design.
 - Avoid marketing copy, superlatives, invented biography, achievements, audience figures, testimonials, badges and decorative dashboards.
 - Use the full names Arabic Reader Toolkit and Open Map Driver. Check their current root summaries before changing factual descriptions. Do not copy operational details from private repositories into this public site.
 - Link to the public deployments. Do not add links to private source repos as though visitors can access them.

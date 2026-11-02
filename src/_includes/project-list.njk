@@ -11,7 +11,7 @@
     </figure>
     {% endif %}
     <div class="project-copy">
-      <div class="project-label"><span class="project-number">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span><p class="project-category">{{ project.category }}</p></div>
+      <div class="project-label"><p class="project-category">{{ project.category }}</p></div>
       <h3><a href="{{ project.url }}"><img class="project-icon" src="{{ project.icon }}" width="28" height="28" alt="" loading="lazy"><span>{{ project.name }}</span></a></h3>
       <p class="project-description">{{ project.description }}</p>
       <div class="project-footer">

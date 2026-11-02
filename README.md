@@ -57,4 +57,4 @@ For the initial setup, go to [Settings → Pages](https://github.com/bbrhm/bbrhm
 - `src/_data/site.json`: site details.
 - `../bbrhm/README.md`: separate GitHub profile repository; keep project descriptions consistent.
 
-Project artwork is copied from the respective applications. Instrument Serif is bundled locally under the SIL Open Font License. See [THIRD_PARTY.md](THIRD_PARTY.md). No application source code is included here.
+Project artwork is copied from the respective applications. See [THIRD_PARTY.md](THIRD_PARTY.md). Typography uses system fonts. No application source code is included here.

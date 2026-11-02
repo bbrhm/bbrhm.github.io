@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="700" viewBox="0 0 800 700" direction="ltr" fill="none" role="img" aria-labelledby="reading-art-title reading-art-desc" data-hero-art="">
+  <title id="reading-art-title">Reading with OCR, transcription and translation</title>
+  <desc id="reading-art-desc">An illustrated PDF page with a recognised text region, an audio waveform and an Arabic-to-English translation panel. This is a diagram, not a product screenshot.</desc>
+  <defs>
+    <pattern id="art-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0v28" stroke="#A9B6AB" stroke-opacity=".08"/></pattern>
+    <filter id="art-shadow" x="-35%" y="-35%" width="170%" height="180%"><feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#000" flood-opacity=".14"/></filter>
+  </defs>
+  <style>
+    [data-hero-art]{--art-desk:#EBE8E0;--art-edge:#CCC8BD;--art-label:#626A60;--art-guide:#8D9688}
+    @media(prefers-color-scheme:dark){[data-hero-art]{--art-desk:#202124;--art-edge:#434A44;--art-label:#B4BDB1;--art-guide:#899883}}
+    [data-theme="light"] [data-hero-art]{--art-desk:#EBE8E0;--art-edge:#CCC8BD;--art-label:#626A60;--art-guide:#8D9688}
+    [data-theme="dark"] [data-hero-art]{--art-desk:#202124;--art-edge:#434A44;--art-label:#B4BDB1;--art-guide:#899883}
+    .art-text{font-family:system-ui,-apple-system,sans-serif}
+    html[lang="ar"] .art-text,svg[lang="ar"] .art-text{letter-spacing:0}
+    @keyframes art-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    @keyframes art-scan{0%,100%{transform:translateY(0);opacity:.35}50%{transform:translateY(83px);opacity:.9}}
+    @keyframes art-wave{0%,100%{transform:scaleY(.6)}50%{transform:scaleY(1)}}
+    @keyframes art-dash{to{stroke-dashoffset:-36}}
+    @media(prefers-reduced-motion:no-preference){
+      .motion-ready .art-float{animation:art-float 6s ease-in-out infinite}
+      .motion-ready .art-float-late{animation:art-float 7s ease-in-out -2s infinite}
+      .motion-ready .art-scan{animation:art-scan 4.5s ease-in-out infinite}
+      .motion-ready .art-wave{transform-box:fill-box;transform-origin:center;animation:art-wave 1.4s ease-in-out infinite alternate}
+      .motion-ready .art-wave:nth-child(2n){animation-delay:-.7s}
+      .motion-ready .art-wave:nth-child(3n){animation-delay:-.3s}
+      .motion-ready .art-flow{animation:art-dash 5s linear infinite}
+    }
+    [data-motion="paused"] [data-hero-art] *{animation-play-state:paused!important}
+  </style>
+  <circle cx="411" cy="344" r="294" stroke="var(--art-guide)" stroke-opacity=".18"/>
+  <path d="M122 209a315 315 0 0 1 554-45M710 443a315 315 0 0 1-450 179" stroke="var(--art-guide)" stroke-opacity=".22" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <rect x="105" y="109" width="604" height="475" rx="30" fill="var(--art-edge)" opacity=".22"/>
+  <rect x="102" y="100" width="604" height="475" rx="30" fill="var(--art-desk)" stroke="var(--art-edge)"/>
+  <rect x="103" y="101" width="602" height="473" rx="29" fill="url(#art-grid)"/>
+  <path d="M128 129h10c5 0 8 1 11 3 3-2 6-3 11-3h10v25h-10c-5 0-8 1-11 3-3-2-6-3-11-3h-10zm21 3v25" stroke="var(--art-label)" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M129 542h47m-47-9h25" stroke="var(--art-guide)" stroke-width="1.5" opacity=".5"/>
+  <path class="art-flow" d="M140 283H84v189h125m401-130h105v213h-99" stroke="#C9AF88" stroke-opacity=".65" stroke-dasharray="4 8" stroke-width="1.5"/>
+  <g transform="rotate(-5 418 295)">
+    <g class="art-float" filter="url(#art-shadow)">
+      <rect x="259" y="60" width="333" height="452" rx="14" fill="#D5D0C4"/>
+      <path d="M266 492h310m-307 6h301" stroke="#BFB8A9" stroke-opacity=".55"/>
+      <rect x="245" y="48" width="333" height="452" rx="14" fill="#FFFEFA" stroke="#D2CEC3"/>
+      <path d="M494 48v53a14 14 0 0 0 14 14h70" fill="#EDEAE2"/>
+      <path d="M494 48v53a14 14 0 0 0 14 14h70" stroke="#D2CEC3"/>
+      <path d="M455 48v48l11-7 11 7V48" fill="#BE9873"/>
+      <text class="art-text" x="352" y="99" text-anchor="middle" fill="#7A8176" font-size="14" letter-spacing="2.5">YOUR PDF</text>
+      <path d="M277 116h115" stroke="#DFDDD3"/>
+      <g stroke="#B6B8AE" stroke-width="5" stroke-linecap="round">
+        <path d="M321 151h220m-252 23h252m-198 23h198M288 350h253m-206 23h206m-233 23h233m-172 23h172m-246 23h246"/>
+      </g>
+      <rect x="274" y="222" width="274" height="101" rx="6" fill="#E2EBDF"/>
+      <text x="515" y="283" text-anchor="end" font-family="serif" font-size="44" fill="#344E40" lang="ar">قِرَاءَة</text>
+      <path d="M297 295h95m-76-24h76m-94-25h94" stroke="#8FA58F" stroke-width="5" stroke-linecap="round"/>
+      <path d="M264 242v-30h30m236 0h28v30m-294 61v30h30m236 0h28v-30" stroke="#5E7D64" stroke-width="2"/>
+      <g class="art-scan"><path d="M271 229h281" stroke="#8AAB81" stroke-width="2"/><path d="M275 232h273" stroke="#8AAB81" stroke-opacity=".12" stroke-width="11"/></g>
+    </g>
+  </g>
+  <g class="art-float-late" filter="url(#art-shadow)">
+    <rect x="52" y="226" width="202" height="87" rx="15" fill="#E8EDDF" stroke="#BBC8B4"/>
+    <rect x="68" y="246" width="40" height="40" rx="10" fill="#D0DDC8"/>
+    <path d="M83 254h-7v7m18-7h7v7m-25 10v7h7m18-7v7h-7m-12-17h12m-12 7h12" stroke="#4B6853" stroke-width="1.7" stroke-linecap="round"/>
+    <text class="art-text" x="179" y="260" text-anchor="middle" fill="#304334" font-size="16" font-weight="600">Page OCR</text>
+    <text class="art-text" x="179" y="283" text-anchor="middle" fill="#596C5B" font-size="12">Image → Text</text>
+  </g>
+  <g class="art-float" filter="url(#art-shadow)">
+    <rect x="62" y="443" width="300" height="133" rx="18" fill="#2C3730" stroke="#59675C"/>
+    <text class="art-text" x="212" y="475" text-anchor="middle" fill="#DFE8DB" font-size="17">Audio → Transcript</text>
+    <g stroke="#B4CCA5" stroke-width="4" stroke-linecap="round">
+      <path class="art-wave" d="M90 515v10"/><path class="art-wave" d="M105 500v40"/><path class="art-wave" d="M120 507v26"/><path class="art-wave" d="M135 494v52"/><path class="art-wave" d="M150 505v30"/><path class="art-wave" d="M165 499v42"/><path class="art-wave" d="M180 510v20"/><path class="art-wave" d="M195 495v50"/><path class="art-wave" d="M210 504v32"/><path class="art-wave" d="M225 508v24"/>
+    </g>
+    <path d="M256 508h75m-75 12h57m-57 12h68" stroke="#A4B09D" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g class="art-float-late" filter="url(#art-shadow)">
+    <rect x="439" y="471" width="294" height="152" rx="19" fill="#F0E8DC" stroke="#CEC0AC"/>
+    <path d="M455 524h262" stroke="#DED2C2"/>
+    <circle cx="470" cy="502" r="5" fill="#A27C51"/>
+    <text class="art-text" x="598" y="508" text-anchor="middle" fill="#594C3D" font-size="16">Arabic → English</text>
+    <path d="M466 539h140m16 0h81m-237 19h209m-209 19h103m16 0h88" stroke="#A79E8F" stroke-width="5" stroke-linecap="round"/>
+    <text class="art-text" x="586" y="606" text-anchor="middle" fill="#776C5C" font-size="11" letter-spacing="1.7">PASSAGE TRANSLATION</text>
+  </g>
+  <circle cx="684" cy="239" r="7" fill="#C5A17B"/><path d="M139 610h18m-9-9v18M646 62h14m-7-7v14" stroke="#A7AD9F" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

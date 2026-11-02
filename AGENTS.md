@@ -5,7 +5,8 @@ Read README.md first. This repository is bbrhm's public personal site. The sibli
 ## Voice and appearance
 
 - Matter of fact, modest and low key. Describe what exists in plain language.
-- Keep the warm paper background, dark text, muted green, restrained serif headings and simple list layout.
+- Keep the warm paper background, dark text, muted green, large Instrument Serif headings, fine rules and two-column project grid. On phones the projects stack. Fonts are self-hosted.
+- Use existing project artwork and screenshots. Keep illustration labels, historical screenshot descriptions and source credits accurate. Do not invent product screenshots.
 - Avoid marketing copy, superlatives, invented biography, achievements, audience figures, testimonials, badges and decorative dashboards.
 - Use the full names Arabic Reader Toolkit and Open Map Driver. Check their current root summaries before changing factual descriptions. Do not copy operational details from private repositories into this public site.
 - Link to the public deployments. Do not add links to private source repos as though visitors can access them.

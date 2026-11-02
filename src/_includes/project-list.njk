@@ -1,14 +1,24 @@
 <ul class="project-list">
   {% for project in projects %}
   <li class="project">
-    <img class="project-icon" src="{{ project.icon }}" width="48" height="48" alt="" loading="lazy">
+    {% if project.preview %}
+    <figure class="project-figure">
+      <a class="project-preview {{ project.previewStyle }}" href="{{ project.url }}" aria-label="{{ project.linkLabel }}: {{ project.name }}">
+        <span class="preview-topline" aria-hidden="true"><span>{{ project.shortName }}</span><span class="preview-open">↗</span></span>
+        <img class="preview-image" src="{{ project.preview }}" width="{{ project.previewWidth }}" height="{{ project.previewHeight }}" alt="{{ project.previewAlt }}"{% if not loop.first %} loading="lazy"{% endif %} decoding="async">
+      </a>
+      <figcaption class="preview-caption">{{ project.previewCaption }}{% if project.creditUrl %} · <a href="{{ project.creditUrl }}">{{ project.creditLabel }}</a>{% endif %}</figcaption>
+    </figure>
+    {% endif %}
     <div class="project-copy">
-      <p class="project-category">{{ project.category }}</p>
-      <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
+      <div class="project-label"><span class="project-number">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span><p class="project-category">{{ project.category }}</p></div>
+      <h3><a href="{{ project.url }}"><img class="project-icon" src="{{ project.icon }}" width="28" height="28" alt="" loading="lazy"><span>{{ project.name }}</span></a></h3>
       <p class="project-description">{{ project.description }}</p>
-      <p class="project-status">{{ project.status }}</p>
+      <div class="project-footer">
+        <p class="project-status"><span aria-hidden="true"></span>{{ project.status }}</p>
+        <a class="project-link" href="{{ project.url }}" aria-label="{{ project.linkLabel }}: {{ project.name }}">{{ project.linkLabel }} <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
-    <a class="project-link" href="{{ project.url }}" aria-label="{{ project.linkLabel }}: {{ project.name }}">{{ project.linkLabel }} <span aria-hidden="true">↗</span></a>
   </li>
   {% endfor %}
 </ul>

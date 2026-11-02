@@ -17,6 +17,8 @@ Open `http://localhost:8080`. Run `npm run check` before publishing. Generated f
 
 Edit `src/_data/projects.json`. Entries appear in their listed order. Copy a small project icon into `src/assets/` and use its root-relative path. Use the public site or demo URL; the application source repositories are private.
 
+An optional `preview` adds a project illustration or screenshot. Include its original `previewWidth`/`previewHeight`, descriptive `previewAlt`, and a short `previewCaption`. Add `creditUrl`/`creditLabel` where needed. Historical screenshots must be described as earlier versions. The current previews reuse the applications' published reading illustration and earlier driving screenshot.
+
 ## Add an article
 
 Create `src/articles/article-slug.md`:
@@ -55,4 +57,4 @@ For the initial setup, go to [Settings → Pages](https://github.com/bbrhm/bbrhm
 - `src/_data/site.json`: site details.
 - `../bbrhm/README.md`: separate GitHub profile repository; keep project descriptions consistent.
 
-Project icons are copied from their respective applications. No application source code is included here.
+Project artwork is copied from the respective applications. Instrument Serif is bundled locally under the SIL Open Font License. See [THIRD_PARTY.md](THIRD_PARTY.md). No application source code is included here.

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 277" role="img" aria-labelledby="title description">
+  <title id="title">Open Map Driver — Contour Hills</title>
+  <desc id="description">A winding road through rolling geographic contour hills.</desc>
+  <defs><clipPath id="icon-clip"><rect width="290" height="277" rx="57"/></clipPath></defs>
+  <g clip-path="url(#icon-clip)">
+    <rect id="base" width="290" height="277" fill="#243c3b"/>
+    <g id="contour-hills">
+      <path id="upper-hill" fill="#98bb7d" d="M-2 81 C33 85 55 80 85 63 C117 44 134 20 155 19 C181 12 211 45 241 60 C260 70 275 73 292 73 L292 280 H-2Z"/>
+      <path id="top-contour" d="M-2 81 C33 85 55 80 85 63 C117 44 134 20 155 19 C181 12 211 45 241 60 C260 70 275 73 292 73" fill="none" stroke="#faf8e9" stroke-width="3.2"/>
+      <path id="central-valley" fill="#49744f" d="M-2 116 C36 116 55 119 82 106 C110 92 130 70 156 70 C186 66 214 86 240 97 C259 105 279 110 292 110 L292 280 H-2Z"/>
+      <path id="second-contour" d="M-2 116 C36 116 55 119 82 106 C110 92 130 70 156 70 C186 66 214 86 240 97 C259 105 279 110 292 110" fill="none" stroke="#faf8e9" stroke-width="3.3"/>
+      <path id="middle-hill" fill="#739a65" d="M-2 143 C28 140 49 135 73 140 C99 146 116 154 135 147 C160 141 181 116 210 110 C235 106 262 115 292 126 L292 280 H-2Z"/>
+      <path id="third-contour" d="M-2 143 C28 140 49 135 73 140 C99 146 116 154 135 147 C160 141 181 116 210 110 C235 106 262 115 292 126" fill="none" stroke="#faf8e9" stroke-width="3.1"/>
+      <path id="near-hill" fill="#49744f" d="M-2 182 C24 176 45 171 70 175 C94 178 117 186 141 185 C168 183 182 167 195 149 C208 136 230 132 256 131 C268 131 283 133 292 133 L292 280 H-2Z"/>
+      <path id="near-contour" d="M-2 182 C24 176 45 171 70 175 C94 178 117 186 141 185 C168 183 182 167 195 149 C208 136 230 132 256 131 C268 131 283 133 292 133" fill="none" stroke="#c7d6a5" stroke-width="3"/>
+      <!-- Foreground overlays lower contour naturally; eliminates detached pale tip. -->
+      <path id="dark-foreground" fill="#243c3b" d="M-2 222 C43 209 78 207 102 206 C141 205 169 197 183 173 C200 145 220 137 263 137 C273 137 283 137 292 138 L292 280 H-2Z"/>
+    </g>
+    <g id="road">
+      <path id="road-surface" fill="#faf8e9" d="M 312 149
+C 269 147 227 150 205 163
+C 187 173 188 190 202 205
+C 212 216 204 223 185 230
+C 160 238 122 243 84 254
+C 36 268 -5 283 -28 300
+L -28 325
+C 23 304 64 288 110 277
+C 154 264 197 258 223 246
+C 250 234 254 215 236 197
+C 220 181 221 175 242 169
+C 262 162 285 162 312 164
+Z"/>
+      <g id="road-centre-markings" fill="none" stroke="#243c3b" stroke-width="4.5" stroke-linecap="round">
+        <path id="mark-1" d="M99 269 C104 267 111 265 116 263"/>
+        <path id="mark-2" d="M136 258 C141 256 148 254 153 252"/>
+        <path id="mark-3" d="M171 247 C177 245 183 243 189 241"/>
+      </g>
+    </g>
+  </g>
+</svg>

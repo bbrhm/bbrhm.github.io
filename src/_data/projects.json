@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Arabic Reader Toolkit",
+    "description": "A reading companion for Arabic learners. Read PDFs and texts, look up unfamiliar passages, and save vocabulary for Anki.",
+    "url": "https://arabic-reader-87bc2.web.app",
+    "linkLabel": "Visit site",
+    "status": "Invite-only alpha",
+    "category": "Reading tool",
+    "icon": "/assets/arabic-reader-toolkit.svg"
+  },
+  {
+    "name": "Open Map Driver",
+    "description": "A browser driving demo using real-world map data. Choose a place and drive through roads, buildings and terrain generated from the map.",
+    "url": "https://open-map-driver.web.app",
+    "linkLabel": "Open demo",
+    "status": "Public alpha",
+    "category": "Driving demo",
+    "icon": "/assets/open-map-driver.svg"
+  }
+]

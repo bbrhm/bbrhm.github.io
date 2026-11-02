@@ -1,0 +1,16 @@
+{
+  "name": "bbrhm.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projects and articles by bbrhm.",
+  "type": "module",
+  "engines": { "node": ">=20.19" },
+  "scripts": {
+    "dev": "node scripts/clean.mjs && eleventy --serve --port=8080",
+    "build": "node scripts/clean.mjs && eleventy",
+    "check": "npm run build && node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7"
+  }
+}

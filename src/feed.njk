@@ -9,14 +9,15 @@ eleventyExcludeFromCollections: true
   <link href="{{ site.url }}/feed.xml" rel="self"/>
   <link href="{{ site.url }}/articles/"/>
   <id>{{ site.url }}/feed.xml</id>
-  <updated>{% if collections.articles.length %}{{ collections.articles[0].date | isoDate }}{% else %}2026-11-02T00:00:00.000Z{% endif %}</updated>
+  <updated>{{ collections.articles | latestUpdate | isoDate }}</updated>
   <author><name>{{ site.name }}</name></author>
   {% for post in collections.articles %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ post.url | absoluteUrl }}"/>
     <id>{{ post.url | absoluteUrl }}</id>
-    <updated>{{ post.date | isoDate }}</updated>
+    <published>{{ post.date | isoDate }}</published>
+    <updated>{{ (post.data.updated or post.date) | isoDate }}</updated>
     <summary>{{ post.data.description or post.data.title }}</summary>
   </entry>
   {% endfor %}

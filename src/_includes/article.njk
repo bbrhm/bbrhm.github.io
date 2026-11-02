@@ -4,7 +4,7 @@ layout: base.njk
 <article class="article-page">
   <header class="article-header">
     <a class="back-link" href="/articles/">← Articles</a>
-    <p class="article-date"><time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time></p>
+    <p class="article-date"><time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>{% if updated %} · Updated <time datetime="{{ updated | isoDate }}">{{ updated | readableDate }}</time>{% endif %}</p>
     <h1>{{ title }}</h1>
     {% if description %}<p class="article-deck">{{ description }}</p>{% endif %}
   </header>

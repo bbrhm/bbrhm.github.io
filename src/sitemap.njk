@@ -7,6 +7,6 @@ eleventyExcludeFromCollections: true
   <url><loc>{{ site.url }}/</loc></url>
   <url><loc>{{ site.url }}/articles/</loc></url>
   {% for post in collections.articles %}
-  <url><loc>{{ post.url | absoluteUrl }}</loc><lastmod>{{ post.date | isoDate }}</lastmod></url>
+  <url><loc>{{ post.url | absoluteUrl }}</loc><lastmod>{{ (post.data.updated or post.date) | isoDate }}</lastmod></url>
   {% endfor %}
 </urlset>

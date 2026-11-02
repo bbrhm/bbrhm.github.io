@@ -2,5 +2,7 @@
   "name": "bbrhm",
   "url": "https://bbrhm.github.io",
   "github": "https://github.com/bbrhm",
-  "description": "Personal projects, demos and articles by bbrhm."
+  "description": "Projects, demos and articles by bbrhm, including Arabic Reader Toolkit and Open Map Driver.",
+  "socialImage": "/assets/social-card.png",
+  "socialImageAlt": "bbrhm — Projects and articles. Arabic Reader Toolkit and Open Map Driver."
 }

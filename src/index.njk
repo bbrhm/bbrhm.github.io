@@ -11,6 +11,6 @@ layout: base.njk
   {% include "project-list.njk" %}
 </section>
 <section class="index-section articles-section" id="articles" aria-labelledby="articles-title">
-  <div class="section-heading"><h2 id="articles-title"><a href="/articles/">Articles <span class="subtle-arrow" aria-hidden="true">↗</span></a></h2><span class="section-count">{{ collections.articles.length }}</span></div>
+  <div class="section-heading"><h2 id="articles-title"><a href="/articles/">Articles <span class="subtle-arrow" aria-hidden="true">↗</span></a></h2>{% if collections.articles.length %}<span class="section-count">{{ collections.articles.length }}</span>{% endif %}</div>
   {% include "article-list.njk" %}
 </section>

@@ -5,7 +5,6 @@
     "url": "https://arabic-reader-87bc2.web.app",
     "linkLabel": "Visit site",
     "status": "Invite-only alpha",
-    "category": "Reading tool",
     "icon": "/assets/arabic-reader-toolkit.svg"
   },
   {
@@ -14,7 +13,6 @@
     "url": "https://open-map-driver.web.app",
     "linkLabel": "Open demo",
     "status": "Public alpha",
-    "category": "Driving demo",
     "icon": "/assets/open-map-driver.svg"
   }
 ]

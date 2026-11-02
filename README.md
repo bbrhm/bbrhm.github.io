@@ -25,6 +25,8 @@ Day mode uses warm off-white/taupe neutrals. Night mode uses almost-black (`#0b0
 
 Edit `src/_data/projects.json`. Entries appear in their listed order. Copy a small project icon into `src/assets/` and use its root-relative path. Use the public site or demo URL; the application source repositories are private.
 
+Each project row is a single keyboard-accessible link. Keep its name, short description, access status and action label clear; redundant category labels are omitted. The Articles count appears only after an article is published.
+
 ## Add an article
 
 Create `src/articles/article-slug.md`:

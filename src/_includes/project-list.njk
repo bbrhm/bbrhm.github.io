@@ -1,14 +1,15 @@
 <ul class="project-list">
   {% for project in projects %}
   <li class="project">
-    <img class="project-icon" src="{{ project.icon }}" width="48" height="48" alt="" loading="lazy">
-    <div class="project-copy">
-      <p class="project-category">{{ project.category }}</p>
-      <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
-      <p class="project-description">{{ project.description }}</p>
-      <p class="project-status">{{ project.status }}</p>
-    </div>
-    <a class="project-link" href="{{ project.url }}" aria-label="{{ project.linkLabel }}: {{ project.name }}">{{ project.linkLabel }} <span aria-hidden="true">↗</span></a>
+    <a class="project-row" href="{{ project.url }}" aria-labelledby="project-title-{{ loop.index }}" aria-describedby="project-description-{{ loop.index }} project-status-{{ loop.index }}">
+      <img class="project-icon" src="{{ project.icon }}" width="48" height="48" alt="" loading="lazy">
+      <div class="project-copy">
+        <h3 id="project-title-{{ loop.index }}">{{ project.name }}</h3>
+        <p class="project-description" id="project-description-{{ loop.index }}">{{ project.description }}</p>
+        <p class="project-status" id="project-status-{{ loop.index }}">{{ project.status }}</p>
+      </div>
+      <span class="project-link" aria-hidden="true">{{ project.linkLabel }} <span>↗</span></span>
+    </a>
   </li>
   {% endfor %}
 </ul>

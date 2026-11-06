@@ -6,6 +6,7 @@
   "type": "module",
   "engines": { "node": ">=20.19" },
   "scripts": {
+    "clean": "node scripts/clean.mjs",
     "dev": "node scripts/clean.mjs && eleventy --serve --port=8080",
     "build": "node scripts/clean.mjs && eleventy",
     "check": "npm run build && node --test tests/theme.test.mjs && node scripts/check.mjs"

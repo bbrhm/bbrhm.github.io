@@ -4,14 +4,26 @@ Personal website: projects, demos and articles. Built with Eleventy, published o
 
 ## Local preview
 
-Use Node 22 (Node 20.19+ also works).
+Use Node 22, recorded in `.nvmrc` and used by CI (Node 20.19+ also works). With nvm installed, run `nvm install` and `nvm use` first.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open `http://localhost:8080`. Run `npm run check` before publishing. Generated files go in `_site/` and are not committed.
+Open `http://localhost:8080`. Run `npm run check` before publishing. Generated files go in `_site/` and are not committed. `npm run clean` removes only that generated directory.
+
+For Codex cloud, see [the cloud development guide](docs/cloud-development.md). A standalone checkout is sufficient: no sibling repositories, Firebase configuration, credentials or environment variables are needed. Read [AGENTS.md](AGENTS.md) for the owner's established design and content preferences.
+
+| Command | Purpose |
+| --- | --- |
+| `npm ci` | Install the exact locked dependencies. |
+| `npm run dev` | Clean, build and serve with live reload on port 8080. |
+| `npm run build` | Clean and generate the static site. |
+| `npm run check` | Build, test theme behavior, and check generated links, metadata and scripts. |
+| `npm run clean` | Remove `_site/`; source files are untouched. |
+
+The checks do not contact Firebase, Google Analytics or other external services. Browser layout and interaction checks are separate from these automated checks.
 
 ## Day and night mode
 
@@ -48,7 +60,7 @@ Write in Markdown.
 
 Change the date to the publication date and remove `draft: true` to publish. The filename sets the URL: `/articles/article-slug/`. The homepage, articles index, Atom feed and sitemap update automatically. Drafts and future-dated articles are excluded from the build. A future-dated article needs a new build on or after its date; there is no scheduled publishing job. Dates are interpreted in UTC.
 
-For images, add files under `src/assets/` and use descriptive alt text. Keep the article filename stable after publication. There are no published articles initially.
+For images, add files under `src/assets/` and use descriptive alt text. Keep the article filename stable after publication. The owner plans to supply an article about Arabic learning; no article text has been supplied or published yet. Do not create placeholder posts for the live site.
 
 Optional article front matter: `updated` records an actual revision date for search metadata, the sitemap and feed. `image` can specify a root-relative or HTTPS share image; add `imageAlt` and, if known, `imageWidth`/`imageHeight`. Without a custom image, links use the site's 1200 × 630 share card.
 
@@ -76,6 +88,6 @@ For the initial setup, go to [Settings → Pages](https://github.com/bbrhm/bbrhm
 - `src/assets/site.css`: styles and day/night palettes.
 - `src/assets/theme.js`: the appearance switch and saved preference.
 - `src/_data/site.json`: site details.
-- `../bbrhm/README.md`: separate GitHub profile repository; keep project descriptions consistent.
+- [bbrhm/bbrhm](https://github.com/bbrhm/bbrhm): separate GitHub profile repository; keep project descriptions consistent when working on both repos. It need not be checked out beside this one.
 
 Project icons are copied from their respective applications. IBM Plex Sans Arabic is bundled under the SIL Open Font License; see [THIRD_PARTY.md](THIRD_PARTY.md). No application source code is included here.

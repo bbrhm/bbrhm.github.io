@@ -1,6 +1,8 @@
 # Website editing
 
-Read README.md first. This repository is bbrhm's public personal site. The sibling `bbrhm` repository contains the GitHub profile README. Application repositories are private and outside this task's edit scope unless the user asks otherwise.
+Read README.md first. This repository is bbrhm's public personal site. For fresh cloud checkouts, setup and task examples, read [docs/cloud-development.md](docs/cloud-development.md). This repository builds on its own; sibling repositories and earlier chat history are not required.
+
+The separate `bbrhm/bbrhm` repository contains the GitHub profile README. The applications are private repositories and outside this task's edit scope unless the user asks otherwise. Their public names, descriptions, URLs and access status are recorded in `src/_data/projects.json`; use that as the available context when their READMEs are unavailable. Do not infer new features from missing private sources.
 
 ## Voice and appearance
 
@@ -15,7 +17,7 @@ Read README.md first. This repository is bbrhm's public personal site. The sibli
 - Day/night mode uses a small header switch and `src/assets/theme.js`. Start from the device preference, persist a manual choice, restore it before paint, and keep the control keyboard-accessible. Without JavaScript the site follows the device preference. Preserve warm neutrals in both themes.
 - Keep descriptive titles, canonical links, Open Graph/Twitter metadata, the share image, JSON-LD, robots.txt, sitemap and feed consistent. Structured data must describe actual content; do not invent credentials, ratings, dates or achievements. JSON-LD is inert data, not executable browser JavaScript.
 - Avoid marketing copy, superlatives, invented biography, achievements, audience figures, testimonials, badges and decorative dashboards.
-- Use the full names Arabic Reader Toolkit and Open Map Driver. Check their current root summaries before changing factual descriptions. Do not copy operational details from private repositories into this public site.
+- Use the full names Arabic Reader Toolkit and Open Map Driver. Check their root summaries when available before changing factual descriptions; otherwise retain the recorded project facts or use information supplied by the owner. Do not copy operational details from private repositories into this public site.
 - Link to the public deployments. Do not add links to private source repos as though visitors can access them.
 
 ## Structure and checks
@@ -25,6 +27,8 @@ Read README.md first. This repository is bbrhm's public personal site. The sibli
 - Keep article slugs stable. Preserve the shared article layout, feed, sitemap and accessible navigation.
 - Keep the site static; it does not need a client framework, accounts or a database for its present purpose. The user-requested theme switch and Google Analytics tag are intentional.
 - The owner explicitly enabled Google Analytics with measurement ID `G-373S98MM0S`. Preserve the supplied snippet in `src/_includes/analytics.njk`, included once in the shared head. Do not add duplicate initialization, custom events or change the measurement ID without a request.
-- Run `npm run check`. Check narrow and wide layouts, and light and dark themes when browser preview is available.
+- Use Node 22 (`.nvmrc`) and `npm ci` for a fresh checkout. Run `npm run check` and `git diff --check` before finishing. The checks run locally without credentials or live services after dependencies are installed. Check narrow and wide layouts, light and dark themes, keyboard focus and reduced motion when browser preview is available; report any preview limitation accurately.
 - Publish through the Pages workflow. Do not commit `_site/`, `node_modules/`, `.DS_Store`, credentials or copied private application files.
-- Keep the profile README's short project descriptions and public links consistent when they change here.
+- Keep the profile README's short project descriptions and public links consistent when they change here. If the other repository is unavailable in a cloud task, report the required companion edit instead of assuming it was made.
+- Cloud tasks normally produce a branch/diff or pull request. A merge or push to `main` deploys the site; follow the user's publishing request and do not claim a deployment until the `Website` workflow succeeds.
+- Update these instructions or the relevant README/docs when a change affects setup, content authoring, checks or the established design. Keep durable project context here rather than relying on chat history.
